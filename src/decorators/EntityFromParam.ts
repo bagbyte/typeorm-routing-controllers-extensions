@@ -17,6 +17,7 @@ export function EntityFromParam(paramName: string, options?: EntityParamOptions)
             index: index,
             name: paramName,
             type: "param",
+            explicitType: "string",
             parse: options && options.parse,
             required: options && options.required,
             transform: (actionProperties, value) => entityTransform(value, target, isArray, options)
